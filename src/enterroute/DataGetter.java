@@ -9,7 +9,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.sql.*;
-import java.util.ArrayList;
 
 public class DataGetter {
     Connection connection;
