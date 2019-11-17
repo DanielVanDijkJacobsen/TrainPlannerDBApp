@@ -80,7 +80,7 @@ public class DataGetter {
             if (fromKNF == destKNF) {
                 sql = "SELECT * FROM KoebenhavnNykoebingfalster ORDER BY ?;";
                 preparedStatement = this.connection.prepareStatement(sql);
-                preparedStatement.setString(1, from);
+                preparedStatement.setString(1,from);
                 resultSet = preparedStatement.executeQuery();
                 return determineValidTrip(from, destination, timeOfDeparture, resultSet);
             } else if (fromKO == destKO && fromKO == 1) {
@@ -140,7 +140,7 @@ public class DataGetter {
                 sqex.printStackTrace();
             }
         }
-        return "Failure to find.";//Work on return statement... And if change is needed.
+        return "failure to find.";//Work on return statement... And if change is needed.
     }
 
     private String determineValidTrip(String from, String destination, Date timeOfDeparture, ResultSet resultSet) throws SQLException {
